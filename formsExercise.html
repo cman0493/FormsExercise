@@ -14,6 +14,7 @@
         <div>
             <label for="storeNumber">Store Number</label>
             <select name="storeNumber id=" storeNumber">
+                <option hidden>Select A Store</option>
                 <option value="3109">3109</option>
                 <option value="2421">2421</option>
                 <option value="5357">5357</option>
@@ -22,7 +23,7 @@
         <fieldset>
             <legend>When You Visited</legend>
             <label for="userDate">Date Visited</label>
-            <input type="date" id="userDate">
+            <input type="date" id="userDate" min="2021-01-01" max="2021-12-31">
             <br>
             <label for="userTime`">Time</label>
             <input type="time" id="userTime">
@@ -39,7 +40,7 @@
                 <input type="radio" id="Male" name="radioLink">
                 <br>
                 <label for="Female">Female</label>
-                <input type="radio" id="Female" name="radioLink">
+                <input type="radio" id="Female" name="radioLink" checked>
             </fieldset>
             <label for="text">Tell us About Your Experience</label>
             <br>
@@ -47,12 +48,16 @@
             <br>
             <label for="timeVisit">Times Visited in the Last Month:</label>
             <br>
-            <input type="number" name="timeVisit" id="timeVisit">
+            <input type="number" name="timeVisit" id="timeVisit" min="0" max="30">
             <br>
-            <input type="checkbox" id="userCheckbox">
+            <input type="checkbox" id="userCheckbox" required>
             <label for="userCheckbox">Please check the box if you are willing to be contacted about your
                 experience.</label>
             <br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" pattern="5-10" title="Please enter a password that is 5 to 10 characters in length" required>
+            <br>
+            <input type="reset">
             <input type="submit">
         </form>
     </fieldset>
